@@ -3,6 +3,7 @@ package com.example.navigationcomponentlivedata
 import android.database.DatabaseUtils
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.animation.TranslateAnimation
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= DataBindingUtil.setContentView(this,R.layout.activity_main)
 
-        setSupportActionBar(binding.toolBar)
+        //setSupportActionBar(binding.toolBar)
 
         navController=findNavController(R.id.nav_host_fragment)
         val appBarConfiguration= AppBarConfiguration(setOf(R.id.enterNameFragment,R.id.showDataFragment))
@@ -38,7 +39,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp()||super.onSupportNavigateUp()
+    }
 
 
 }

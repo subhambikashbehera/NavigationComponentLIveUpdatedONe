@@ -9,10 +9,21 @@
         android:id="@+id/enterNameFragment"
         android:name="com.example.navigationcomponentlivedata.enterNameFragment"
         android:label="enter_name_fragment"
-        tools:layout="@layout/enter_name_fragment" />
+        tools:layout="@layout/enter_name_fragment"
+        >
+        <action
+            android:id="@+id/action_enterNameFragment_to_showDataFragment"
+            app:destination="@id/showDataFragment"
+            app:enterAnim="@anim/slideout"
+            app:popEnterAnim="@anim/slidein"
+            />
+    </fragment>
+
+
     <fragment
         android:id="@+id/showDataFragment"
         android:name="com.example.navigationcomponentlivedata.SndData.showDataFragment"
         android:label="show_data_fragment"
-        tools:layout="@layout/show_data_fragment" />
+        tools:layout="@layout/show_data_fragment"
+        />
 </navigation>
