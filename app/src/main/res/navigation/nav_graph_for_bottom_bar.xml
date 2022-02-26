@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_for_bottom_bar"
+    app:startDestination="@id/enterNameFragment">
+
+    <fragment
+        android:id="@+id/enterNameFragment"
+        android:name="com.example.navigationcomponentlivedata.enterNameFragment"
+        android:label="enter_name_fragment"
+        tools:layout="@layout/enter_name_fragment" />
+    <fragment
+        android:id="@+id/showDataFragment"
+        android:name="com.example.navigationcomponentlivedata.SndData.showDataFragment"
+        android:label="show_data_fragment"
+        tools:layout="@layout/show_data_fragment" />
+</navigation>
